@@ -10,5 +10,5 @@ const SITE = {
   //   Web3Forms: contactEndpoint = 'https://api.web3forms.com/submit', contactKey = your access key
   //   Formspree: contactEndpoint = 'https://formspree.io/f/<form id>', contactKey = ''
   contactEndpoint: 'https://api.web3forms.com/submit',
-  contactKey: 'REPLACE_WITH_ACCESS_KEY',
+  contactKey: 'd1404ceb-2966-451d-83cd-2860320a6d14',
 };
