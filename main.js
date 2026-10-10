@@ -15,6 +15,7 @@
 /* Theme switcher under the big frame */
 (function () {
   var T = {
+    signature: { name: 'Signature', l: 'theme_signature_landscape_3x', p: null },
     noir: { name: 'Noir Editorial', l: 'theme_noir_landscape_3x', p: 'theme_noir_portrait_3x' },
     gallery: { name: 'Gallery', l: 'theme_gallery_landscape_3x', p: 'theme_gallery_portrait_3x' },
     chronograph: { name: 'Chronograph', l: 'theme_chronograph_landscape_3x', p: 'theme_chronograph_portrait_3x' },
@@ -24,7 +25,7 @@
   var orientLink = document.getElementById('orient-link');
   var links = document.querySelectorAll('.theme-link');
   if (!img) return;
-  var state = { theme: 'noir', portrait: false };
+  var state = { theme: 'signature', portrait: false };
 
   Object.keys(T).forEach(function (k) {
     [T[k].l, T[k].p].forEach(function (f) { if (f) { var i = new Image(); i.src = 'assets/' + f + '.webp'; } });
