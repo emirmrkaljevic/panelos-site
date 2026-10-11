@@ -146,7 +146,7 @@ button.btn:disabled { opacity: 0.6; cursor: default; }
 
 /* tray row, compat line, faq */
 .tray-row { display: flex; align-items: center; gap: 2.5rem; padding-top: 5rem; flex-wrap: wrap; }
-.tray-row img { border-radius: 6px; }
+.tray-row img { border-radius: 6px; max-width: 100%; height: auto; }
 .tray-row p { font-family: var(--serif); font-size: 1.45rem; line-height: 1.4; margin: 0; }
 .compat { padding-top: 3.5rem; color: var(--dim); }
 .compat p { margin: 0; }

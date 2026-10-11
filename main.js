@@ -33,7 +33,7 @@
   });
 
   function render() {
-    var t = T[state.theme];
+    var t = T[state.theme] || T.signature;
     var portrait = state.portrait && !!t.p;
     img.src = 'assets/' + (portrait ? t.p : t.l) + '.webp';
     img.width = portrait ? 960 : 1440;
@@ -42,7 +42,8 @@
     img.classList.toggle('portrait', portrait);
     img.parentElement.classList.toggle('is-portrait', portrait);
     links.forEach(function (a) { a.classList.toggle('is-on', a.dataset.theme === state.theme); });
-    orientLink.textContent = state.portrait ? 'landscape' : 'portrait';
+    orientLink.textContent = portrait ? 'landscape' : 'portrait';
+    orientLink.style.display = t.p ? '' : 'none';
   }
   links.forEach(function (a) {
     a.addEventListener('click', function (e) { e.preventDefault(); state.theme = a.dataset.theme; render(); });
