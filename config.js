@@ -1,7 +1,7 @@
 /* Everything you might want to change lives here. */
 const SITE = {
   name: 'PanelOS',
-  tagline: 'Software for 3.5-inch USB PC screens: temperatures, watts and what is playing on Spotify, in four themes.',
+  tagline: 'Software for 3.5-inch USB PC screens: temperatures, watts and what is playing on Spotify, in six themes.',
   price: '€14.99',
   buyUrl: '#',   // Lemon Squeezy checkout link (Pro)
   liteUrl: '#',  // Lite download link
