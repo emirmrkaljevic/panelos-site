@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Setup — PanelOS Help</title>
+  <meta name="description" content="How to install PanelOS on Windows 10/11 for a 3.5-inch USB PC screen (1A86:5722)." />
+  <meta name="theme-color" content="#0e0e0d" />
+  <link rel="stylesheet" href="../styles.css?v=20261011h" />
+  <style>
+    .article { padding-top: 6vh; padding-bottom: 4rem; max-width: calc(36rem + 2 * var(--edge)); }
+    .article h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); max-width: 16ch; margin-bottom: 1.2rem; }
+    .article p, .article li { color: #cdc8be; }
+    .article ol, .article ul { padding-left: 1.15rem; margin: 0 0 1rem; }
+    .article li { margin-bottom: 0.55rem; }
+    .article li::marker { color: var(--gold); }
+    .back { font-size: 0.92rem; color: var(--dim); text-decoration: none; }
+    .back:hover { color: var(--gold); }
+    .crumb { margin-bottom: 1.6rem; }
+  </style>
+</head>
+<body>
+<header class="top">
+  <a class="name" href="../">PanelOS</a>
+  <nav>
+    <a href="../#buy">Buy</a>
+    <a href="./">Help</a>
+    <a href="../#contact">Contact</a>
+  </nav>
+</header>
+<main>
+  <section class="article">
+    <p class="crumb"><a class="back" href="./">← Help</a></p>
+    <h1>Setup</h1>
+    <p>Windows 10 or 11, 64-bit. Confirmed panels: 3.5″ USB with hardware id <code>VID_1A86&amp;PID_5722</code>. Other sizes are experimental.</p>
+    <ol>
+      <li>Plug the panel into a USB port on the PC (not a passive hub if you can help it).</li>
+      <li>Run <code>PanelOS-Setup.exe</code>. Allow the one-time admin step so temperatures and fans can read.</li>
+      <li>Open the tray icon → Theme. Lite stays on Classic; Pro unlocks every theme.</li>
+      <li>Optional: Settings → start with Windows (short delay so USB is ready).</li>
+    </ol>
+    <p>Updates: run the new installer over the old one. Settings stay. Pro covers every 1.x update.</p>
+    <p>Windows may warn about an unsigned installer (SmartScreen). That is expected until code signing is in place — use “More info” → Run anyway if you trust the download from this site.</p>
+  </section>
+</main>
+<footer class="foot">
+  <p class="legal">Not affiliated with any hardware manufacturer. Trademarks belong to their owners.</p>
+</footer>
+</body>
+</html>
