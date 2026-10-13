@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Device not connected — PanelOS Help</title>
+  <meta name="description" content="Fix a blank or missing 3.5-inch USB panel with PanelOS: cable, port, Hardware Ids, and tray reconnect." />
+  <meta name="theme-color" content="#0e0e0d" />
+  <link rel="stylesheet" href="../styles.css?v=20261011h" />
+  <style>
+    .article { padding-top: 6vh; padding-bottom: 4rem; max-width: calc(36rem + 2 * var(--edge)); }
+    .article h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); max-width: 16ch; margin-bottom: 1.2rem; }
+    .article p, .article li { color: #cdc8be; }
+    .article ol, .article ul { padding-left: 1.15rem; margin: 0 0 1rem; }
+    .article li { margin-bottom: 0.55rem; }
+    .article li::marker { color: var(--gold); }
+    .back { font-size: 0.92rem; color: var(--dim); text-decoration: none; }
+    .back:hover { color: var(--gold); }
+    .crumb { margin-bottom: 1.6rem; }
+  </style>
+</head>
+<body>
+<header class="top">
+  <a class="name" href="../">PanelOS</a>
+  <nav>
+    <a href="../#buy">Buy</a>
+    <a href="./">Help</a>
+    <a href="../#contact">Contact</a>
+  </nav>
+</header>
+<main>
+  <section class="article">
+    <p class="crumb"><a class="back" href="./">← Help</a></p>
+    <h1>Device not connected</h1>
+    <p>If the tray says the panel is missing, or the screen stays black:</p>
+    <ol>
+      <li>Unplug the panel, wait a few seconds, plug it back into a different USB port on the PC.</li>
+      <li>Check Device Manager → the panel → Properties → Details → Hardware Ids. You want <code>VID_1A86&amp;PID_5722</code>.</li>
+      <li>Avoid unpowered hubs and long cheap extension cables for the first test.</li>
+      <li>Quit PanelOS from the tray, open it again, then pick a theme once more.</li>
+      <li>Power-cycle the panel (unplug USB) if only a strip of the image appears.</li>
+    </ol>
+    <p>Still stuck? Use the <a href="../#contact">contact form</a> with your Hardware Ids and Windows version.</p>
+  </section>
+</main>
+<footer class="foot">
+  <p class="legal">Not affiliated with any hardware manufacturer. Trademarks belong to their owners.</p>
+</footer>
+</body>
+</html>
