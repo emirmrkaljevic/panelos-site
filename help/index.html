@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Help — PanelOS</title>
+  <meta name="description" content="Setup, screen connection, CPU temperature, themes and Spotify for PanelOS on 3.5-inch USB PC screens." />
+  <meta name="theme-color" content="#0e0e0d" />
+  <link rel="stylesheet" href="../styles.css?v=20261011h" />
+  <style>
+    .help-list { padding-top: 6vh; padding-bottom: 4rem; max-width: calc(36rem + 2 * var(--edge)); }
+    .help-list h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); max-width: 18ch; margin-bottom: 1.5rem; }
+    .help-list ul { list-style: none; margin: 0; padding: 0; }
+    .help-list li { border-top: 1px solid var(--rule); }
+    .help-list li a {
+      display: block; padding: 1rem 0; text-decoration: none; color: var(--ink);
+      font-size: 1.05rem;
+    }
+    .help-list li a:hover { color: var(--gold); }
+    .help-list li span { display: block; color: var(--dim); font-size: 0.92rem; margin-top: 0.25rem; }
+    .article { padding-top: 6vh; padding-bottom: 4rem; max-width: calc(36rem + 2 * var(--edge)); }
+    .article h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); max-width: 16ch; margin-bottom: 1.2rem; }
+    .article p, .article li { color: #cdc8be; }
+    .article ol, .article ul { padding-left: 1.15rem; margin: 0 0 1rem; }
+    .article li { margin-bottom: 0.55rem; }
+    .article li::marker { color: var(--gold); }
+    .back { font-size: 0.92rem; color: var(--dim); text-decoration: none; }
+    .back:hover { color: var(--gold); }
+    .crumb { margin-bottom: 1.6rem; }
+  </style>
+</head>
+<body>
+<header class="top">
+  <a class="name" href="../">PanelOS</a>
+  <nav>
+    <a href="../#buy">Buy</a>
+    <a href="./">Help</a>
+    <a href="../#contact">Contact</a>
+  </nav>
+</header>
+<main>
+  <section class="help-list">
+    <h1>Help</h1>
+    <ul>
+      <li><a href="setup.html">Setup<span>Install, first run, start with Windows.</span></a></li>
+      <li><a href="device-not-connected.html">Device not connected<span>Panel not found, blank screen, wrong cable.</span></a></li>
+      <li><a href="cpu-temperature-zero.html">CPU temperature shows 0<span>Admin rights and sensor drivers.</span></a></li>
+      <li><a href="themes.html">Themes<span>Lite vs Pro, landscape and portrait.</span></a></li>
+      <li><a href="spotify.html">Spotify / now playing<span>No login. Keep the desktop app open.</span></a></li>
+        <li><a href="smartscreen.html">Windows SmartScreen warning</a> — unsigned installer, More info → Run anyway</li>
+</ul>
+  </section>
+</main>
+<footer class="foot">
+  <p class="legal">Not affiliated with any hardware manufacturer. Trademarks belong to their owners.</p>
+</footer>
+</body>
+</html>
