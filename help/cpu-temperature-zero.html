@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CPU temperature shows 0 — PanelOS Help</title>
+  <meta name="description" content="Why PanelOS shows CPU temperature 0 and how to fix it with admin rights or a sensor driver." />
+  <meta name="theme-color" content="#0e0e0d" />
+  <link rel="stylesheet" href="../styles.css?v=20261011h" />
+  <style>
+    .article { padding-top: 6vh; padding-bottom: 4rem; max-width: calc(36rem + 2 * var(--edge)); }
+    .article h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); max-width: 16ch; margin-bottom: 1.2rem; }
+    .article p, .article li { color: #cdc8be; }
+    .article ol, .article ul { padding-left: 1.15rem; margin: 0 0 1rem; }
+    .article li { margin-bottom: 0.55rem; }
+    .article li::marker { color: var(--gold); }
+    .back { font-size: 0.92rem; color: var(--dim); text-decoration: none; }
+    .back:hover { color: var(--gold); }
+    .crumb { margin-bottom: 1.6rem; }
+  </style>
+</head>
+<body>
+<header class="top">
+  <a class="name" href="../">PanelOS</a>
+  <nav>
+    <a href="../#buy">Buy</a>
+    <a href="./">Help</a>
+    <a href="../#contact">Contact</a>
+  </nav>
+</header>
+<main>
+  <section class="article">
+    <p class="crumb"><a class="back" href="./">← Help</a></p>
+    <h1>CPU temperature shows 0</h1>
+    <p>The panel still runs. Only the sensor values that need elevated access read as zero.</p>
+    <ol>
+      <li>Re-run the installer and accept the admin step, or start PanelOS once as administrator.</li>
+      <li>Some boards need the chipset / sensor stack from the motherboard maker before package temp and fans appear.</li>
+      <li>GPU temp and load usually work without that; CPU and fan are the ones that go quiet.</li>
+    </ol>
+    <p>If everything else looks fine and only CPU stays at 0 after admin + drivers, send your CPU model through the <a href="../#contact">contact form</a>.</p>
+  </section>
+</main>
+<footer class="foot">
+  <p class="legal">Not affiliated with any hardware manufacturer. Trademarks belong to their owners.</p>
+</footer>
+</body>
+</html>
