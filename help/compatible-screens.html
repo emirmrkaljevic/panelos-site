@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Which 3.5-inch USB screens work with PanelOS — PanelOS Help</title>
+  <meta name="description" content="How to check if your 3.5-inch USB PC screen works with PanelOS: find the Hardware Id 1A86:5722 in Windows Device Manager, landscape 480x320 or portrait 320x480." />
+  <link rel="canonical" href="https://emirmrkaljevic.github.io/panelos-site/help/compatible-screens.html" />
+  <meta name="theme-color" content="#0e0e0d" />
+  <link rel="stylesheet" href="../styles.css?v=20261011h" />
+  <style>
+    .article { padding-top: 6vh; padding-bottom: 4rem; max-width: calc(36rem + 2 * var(--edge)); }
+    .article h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); max-width: 16ch; margin-bottom: 1.2rem; }
+    .article p, .article li { color: #cdc8be; }
+    .article ol, .article ul { padding-left: 1.15rem; margin: 0 0 1rem; }
+    .article li { margin-bottom: 0.55rem; }
+    .article li::marker { color: var(--gold); }
+    .back { font-size: 0.92rem; color: var(--dim); text-decoration: none; }
+    .back:hover { color: var(--gold); }
+    .crumb { margin-bottom: 1.6rem; }
+    .article h2 { font-size: 1.3rem; margin: 1.6rem 0 0.6rem; }
+  </style>
+</head>
+<body>
+<header class="top">
+  <a class="name" href="../">PanelOS</a>
+  <nav>
+    <a href="../#buy">Buy</a>
+    <a href="./">Help</a>
+    <a href="../#contact">Contact</a>
+  </nav>
+</header>
+<main>
+  <section class="article">
+    <p class="crumb"><a class="back" href="./">← Help</a></p>
+    <h1>Which 3.5-inch USB screens work</h1>
+    <p>PanelOS is a Windows app for the small 3.5-inch USB screens people put inside or on top of a PC case. Many of these screens look alike from the outside, so check the USB Hardware Id before you buy Pro.</p>
+    <h2>Check your screen in two minutes</h2>
+    <ol>
+      <li>Plug the screen into a USB port on the PC (not an unpowered hub for this test).</li>
+      <li>Open Device Manager (right-click Start, then Device Manager).</li>
+      <li>Find the new device, usually under Ports (COM &amp; LPT) or Other devices, and open Properties.</li>
+      <li>On the Details tab, pick Hardware Ids. Look for <code>VID_1A86&amp;PID_5722</code>.</li>
+    </ol>
+    <p>If you see <code>1A86:5722</code>, PanelOS supports it. Install the free Lite version first: if Classic shows up on the screen, every Pro theme will too.</p>
+    <h2>What PanelOS draws</h2>
+    <ul>
+      <li>480×320 in landscape and 320×480 in portrait; switch from the tray menu.</li>
+      <li>CPU and GPU temperature and watts, plus RAM, VRAM and fan speed.</li>
+      <li>Now playing from Spotify (Pro), read from Windows, with no Spotify login.</li>
+    </ul>
+    <h2>Other sizes and other Hardware Ids</h2>
+    <p>Other screen sizes are experimental for now. If yours shows a different Hardware Id, send it with the <a href="../#contact">contact form</a> before buying, and you'll get a straight answer on whether it works.</p>
+    <p>Lite is free, Pro is <span>€14.99</span> once. Refund if it doesn't work with your panel and can't be fixed within 7 days.</p>
+    <p>Related: <a href="device-not-connected.html">Device not connected</a> · <a href="setup.html">Setup</a> · <a href="themes.html">Themes</a></p>
+  </section>
+</main>
+<footer class="foot">
+  <p class="legal">Not affiliated with any hardware manufacturer. Trademarks belong to their owners.</p>
+</footer>
+</body>
+</html>
