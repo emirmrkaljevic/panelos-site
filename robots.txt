@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://emirmrkaljevic.github.io/panelos-site/sitemap.xml
