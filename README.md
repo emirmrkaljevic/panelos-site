@@ -1,7 +1,7 @@
 # PanelOS website
 
 Landing page and help pages for **PanelOS**, Windows software for 3.5-inch USB PC sensor screens
-(the small "turing-style" case displays, USB ID 1A86:5722).
+(small case displays, USB ID 1A86:5722).
 
 **Live site:** https://emirmrkaljevic.github.io/panelos-site/
 
