@@ -17,70 +17,61 @@
   {"@context":"https://schema.org","@type":"SoftwareApplication","name":"PanelOS","operatingSystem":"Windows 10, Windows 11","applicationCategory":"UtilitiesApplication","description":"Software for 3.5-inch USB PC sensor screens: CPU/GPU temperatures, watts, fans and Spotify now-playing, in six themes.","url":"https://emirmrkaljevic.github.io/panelos-site/","image":"https://emirmrkaljevic.github.io/panelos-site/assets/theme_signature_landscape_3x.png","offers":[{"@type":"Offer","name":"Lite","price":"0","priceCurrency":"EUR"},{"@type":"Offer","name":"Pro","price":"14.99","priceCurrency":"EUR"}]}
   </script>
   <link rel="canonical" href="https://emirmrkaljevic.github.io/panelos-site/" />
-  <meta name="theme-color" content="#0e0e0d" />
-  <link rel="stylesheet" href="styles.css?v=20261011" />
+  <meta name="theme-color" content="#050505" />
+  <link rel="stylesheet" href="home.css?v=20261015e" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
 </head>
 <body>
-
 <header class="top">
   <a class="name" href="#" data-site="name">PanelOS</a>
-  <nav>
-    <a href="#buy">Buy</a>
-    <a href="help/">Help</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <nav><a href="help/">Help</a><a href="#contact">Contact</a><a data-site="buyUrl" href="#">Buy</a></nav>
 </header>
-
 <main>
-  <section class="intro" id="buy">
-    <h1>A better face for that <span class="scribble">little</span> USB screen.</h1>
-    <p class="sub">Windows app for 3.5" USB panels. Lite free, Pro <span data-site="price">€14.99</span> once.</p>
-    <p class="buttons">
-      <a class="btn btn-buy" data-site="buyUrl" href="#">Buy Pro</a>
-      <a class="btn btn-lite" data-site="liteUrl" href="#">Download Lite</a>
-    </p>
-  </section>
-
-  <section class="hero" aria-label="Themes">
-    <img id="theme-frame" class="frame" src="assets/theme_signature_landscape_3x.webp" width="1440" height="960"
-         alt="The Signature theme: CPU and GPU temperature, RAM, VRAM, fan and now playing" />
-    <div class="switch">
-      <p class="themes" id="themes">
-        <a href="#themes" class="theme-link is-on" data-theme="signature">Signature</a>
-        <a href="#themes" class="theme-link" data-theme="nature">Nature Flow</a>
-        <a href="#themes" class="theme-link" data-theme="noir">Noir Editorial</a>
-        <a href="#themes" class="theme-link" data-theme="gallery">Gallery</a>
-        <a href="#themes" class="theme-link" data-theme="chronograph">Chronograph</a>
-        <a href="#themes" class="theme-link" data-theme="classic">Classic</a>
-        <a href="#themes" class="orient-link" id="orient-link">portrait</a>
+  <section class="hero" id="buy">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-copy">
+      <h1>Live PC stats on your<br />3.5&quot; case screen.</h1>
+      <p class="sub">Windows app for 3.5&quot; USB case screens (480×320). CPU/GPU temps, usage, watts, fans, and your Spotify track with cover, plus six themes.</p>
+      <p class="buttons">
+        <a class="btn btn-buy" data-site="buyUrl" href="#">Get Pro</a>
+        <a class="link" data-site="liteUrl" href="#">Download Lite</a>
       </p>
-      <p class="fine">Real app frames. Album art is a stand-in.</p>
+      <ol class="steps">
+        <li><svg viewBox="0 0 24 24"><rect x="3" y="6" width="14" height="10" rx="1"/><path d="M17 11h4"/></svg>Plug in</li>
+        <li><svg viewBox="0 0 24 24"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>Install PanelOS</li>
+        <li><svg viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7"/><rect x="13" y="4" width="7" height="7"/><rect x="4" y="13" width="7" height="7"/><rect x="13" y="13" width="7" height="7"/></svg>Pick theme</li>
+      </ol>
+      <p class="price">Lite free · Pro <span data-site="price">€14.99</span> once · 2 PCs · all 1.x updates</p>
     </div>
+    <figure class="panel">
+      <div class="bezel"><span class="co co-l" style="top:22%">Temps &amp; load</span><span class="co co-l" style="top:72%">Now playing</span><span class="co co-r" style="top:51%">Fans</span><img id="theme-frame" src="assets/theme_nature_landscape_3x.webp" width="1440" height="960" alt="The Nature Flow theme on a 3.5-inch screen" /></div>
+      <figcaption><span id="theme-name">Nature Flow</span> &nbsp;—&nbsp; 3.5&quot;, 480 × 320</figcaption>
+    </figure>
+    <nav class="themes" id="themes" aria-label="Themes">
+      <button class="tile" data-theme="signature"><span>Signature</span></button>
+      <button class="tile is-on" data-theme="nature"><span>Nature Flow</span></button>
+      <button class="tile" data-theme="noir"><span>Noir Editorial</span></button>
+      <button class="tile" data-theme="gallery"><span>Gallery</span></button>
+      <button class="tile" data-theme="chronograph"><span>Chronograph</span></button>
+      <button class="tile" data-theme="classic"><span>Classic</span></button>
+    </nav>
   </section>
 
-  <section class="tray-row">
+  <section class="still" aria-hidden="true"><img src="assets/wp_koi_pond.webp" alt="" loading="lazy" /></section>
+
+  <section class="tray wrap">
     <img src="assets/tray_theme_menu_2x.png" width="437" height="438" alt="The PanelOS tray menu with the Theme submenu open" />
-    <p>Lives in the tray.<br />Pick a theme, the screen changes instantly.</p>
+    <div><h2>Lives in the tray.</h2><p>Pick a theme; the screen follows.</p><p class="fine">Works with 3.5&quot; USB panels (<code>1A86:5722</code>).</p></div>
   </section>
-
-  <section class="compat">
-    <p>Works with 3.5" USB panels (<code>1A86:5722</code>). Other sizes: experimental.</p>
+  <section id="faq" class="faq wrap">
+    <details><summary>CPU temperature shows 0?</summary><p>It needs admin rights (set once by the installer), and some PCs also need a sensor driver.</p></details>
+    <details><summary>Spotify login?</summary><p>None; it reads the current song from Windows, so just keep Spotify open.</p></details>
+    <details><summary>Refunds?</summary><p>Only if it doesn't work with your panel and we can't fix it within 7 days; use the form first.</p></details>
+    <details><summary>Updates?</summary><p>Run the new installer over the old one; Pro gets every 1.x update.</p></details>
+    <details><summary>Windows SmartScreen?</summary><p>Unsigned installer for now. Choose More info → Run anyway if Windows warns; the file is the same one from this site.</p></details>
   </section>
-
-  <section id="faq" class="faq">
-    <h3>CPU temperature shows 0?</h3>
-    <p>It needs admin rights (set once by the installer), and some PCs also need a sensor driver.</p>
-    <h3>Spotify login?</h3>
-    <p>None; it reads the current song from Windows, so just keep Spotify open.</p>
-    <h3>Refunds?</h3>
-    <p>Only if it doesn't work with your panel and we can't fix it within 7 days; use the form first.</p>
-    <h3>Updates?</h3>
-    <p>Run the new installer over the old one; Pro gets every 1.x update.</p>
-    <h3>Windows SmartScreen?</h3>
-    <p>Unsigned installer for now. Choose More info → Run anyway if Windows warns; the file is the same one from this site.</p>
-  </section>
-
-  <section id="contact" class="contact">
+  <section id="contact" class="contact wrap">
     <h2>Contact</h2>
     <form id="contact-form" novalidate>
       <input type="hidden" name="access_key" id="cf-key" />
@@ -103,12 +94,8 @@
     </form>
   </section>
 </main>
-
-<footer class="foot">
-  <p class="legal">Not affiliated with any hardware manufacturer. Trademarks belong to their owners.</p>
-</footer>
-
-<script src="config.js?v=20261011"></script>
-<script src="main.js?v=20261011"></script>
+<footer class="foot wrap"><span>PanelOS</span><a href="help/">Help</a><p class="legal">Not affiliated with any hardware manufacturer. Trademarks belong to their owners.</p></footer>
+<script src="config.js?v=20261015"></script>
+<script src="main.js?v=20261015"></script>
 </body>
 </html>

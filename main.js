@@ -12,44 +12,24 @@
   var ogd = document.querySelector('meta[property="og:description"]'); if (ogd) ogd.content = SITE.tagline;
 })();
 
-/* Theme switcher under the big frame */
+/* Theme tiles swap the hero panel */
 (function () {
-  var T = {
-    signature: { name: 'Signature', l: 'theme_signature_landscape_3x', p: 'theme_signature_portrait_3x' },
-    nature: { name: 'Nature Flow', l: 'theme_nature_landscape_3x', p: 'theme_nature_portrait_3x' },
-    noir: { name: 'Noir Editorial', l: 'theme_noir_landscape_3x', p: 'theme_noir_portrait_3x' },
-    gallery: { name: 'Gallery', l: 'theme_gallery_landscape_3x', p: 'theme_gallery_portrait_3x' },
-    chronograph: { name: 'Chronograph', l: 'theme_chronograph_landscape_3x', p: 'theme_chronograph_portrait_3x' },
-    classic: { name: 'Classic', l: 'theme_classic_landscape_3x', p: null }
-  };
-  var img = document.getElementById('theme-frame');
-  var orientLink = document.getElementById('orient-link');
-  var links = document.querySelectorAll('.theme-link');
+  var img = document.getElementById('theme-frame'), cap = document.getElementById('theme-name');
+  var tiles = document.querySelectorAll('.tile');
   if (!img) return;
-  var state = { theme: 'signature', portrait: false };
-
-  Object.keys(T).forEach(function (k) {
-    [T[k].l, T[k].p].forEach(function (f) { if (f) { var i = new Image(); i.src = 'assets/' + f + '.webp'; } });
+  tiles.forEach(function (t) {
+    t.addEventListener('click', function () {
+      var k = t.dataset.theme, n = t.querySelector('span').textContent;
+      img.classList.add('swap');
+      setTimeout(function () {
+        img.src = 'assets/theme_' + k + '_landscape_3x.webp';
+        img.alt = 'The ' + n + ' theme on a 3.5-inch screen';
+        cap.textContent = n; img.classList.remove('swap');
+      }, 180);
+      tiles.forEach(function (x) { x.classList.toggle('is-on', x === t); });
+      if (window.innerWidth < 800) document.getElementById('buy').scrollIntoView({ behavior: 'smooth' });
+    });
   });
-
-  function render() {
-    var t = T[state.theme] || T.signature;
-    var portrait = state.portrait && !!t.p;
-    img.src = 'assets/' + (portrait ? t.p : t.l) + '.webp';
-    img.width = portrait ? 960 : 1440;
-    img.height = portrait ? 1440 : 960;
-    img.alt = 'The ' + t.name + ' theme, ' + (portrait ? 'portrait 320×480' : 'landscape 480×320');
-    img.classList.toggle('portrait', portrait);
-    img.parentElement.classList.toggle('is-portrait', portrait);
-    links.forEach(function (a) { a.classList.toggle('is-on', a.dataset.theme === state.theme); });
-    orientLink.textContent = portrait ? 'landscape' : 'portrait';
-    orientLink.style.display = t.p ? '' : 'none';
-  }
-  links.forEach(function (a) {
-    a.addEventListener('click', function (e) { e.preventDefault(); state.theme = a.dataset.theme; render(); });
-  });
-  orientLink.addEventListener('click', function (e) { e.preventDefault(); state.portrait = !state.portrait; render(); });
-  render();
 })();
 
 /* Contact form: posts to SITE.contactEndpoint (Web3Forms / Formspree style) */
