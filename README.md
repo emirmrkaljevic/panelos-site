@@ -5,7 +5,7 @@ Landing page and help pages for **PanelOS**, Windows software for 3.5-inch USB P
 
 **Live site:** https://emirmrkaljevic.github.io/panelos-site/
 
-![Signature theme](assets/theme_signature_landscape_3x.png)
+[![PanelOS homepage](assets/readme_hero.jpg)](https://emirmrkaljevic.github.io/panelos-site/)
 
 ## What PanelOS shows
 - CPU and GPU temperature, load, watts, fans, RAM and VRAM
@@ -21,4 +21,5 @@ Landing page and help pages for **PanelOS**, Windows software for 3.5-inch USB P
 [Spotify](https://emirmrkaljevic.github.io/panelos-site/help/spotify.html) ·
 [Screen not connecting](https://emirmrkaljevic.github.io/panelos-site/help/device-not-connected.html) ·
 [CPU temperature shows 0](https://emirmrkaljevic.github.io/panelos-site/help/cpu-temperature-zero.html) ·
-[Compatible screens](https://emirmrkaljevic.github.io/panelos-site/help/compatible-screens.html)
+[Compatible screens](https://emirmrkaljevic.github.io/panelos-site/help/compatible-screens.html) ·
+[SmartScreen warning](https://emirmrkaljevic.github.io/panelos-site/help/smartscreen.html)
