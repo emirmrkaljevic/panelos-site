@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Windows SmartScreen — PanelOS Help</title>
+  <title>Windows blocked PanelOS — PanelOS Help</title>
   <meta name="description" content="What to do if Windows SmartScreen warns about the PanelOS installer." />
   <link rel="stylesheet" href="help.css?v=20261016" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -20,7 +20,7 @@
 </header>
 <main class="help article">
   <p class="crumb"><a href="../">PanelOS</a> · <a href="./">Help</a></p>
-  <h1>Windows SmartScreen</h1>
+  <h1>Windows blocked PanelOS / SmartScreen</h1>
   <p>PanelOS is not code-signed yet, so Windows may show a SmartScreen warning the first time you run the installer. That is expected for a new independent app.</p>
   <h2>What to do</h2>
   <ol>
@@ -29,6 +29,12 @@
     <li>Finish the installer as usual. Pro buyers use the same Setup.exe and unlock with their license key in Settings.</li>
   </ol>
   <p>Once a code-signing certificate is in place, this warning goes away. Until then, stick to downloads from the site so you know the file is the real one.</p>
+  <h2>Smart App Control blocked it or the file vanished</h2>
+  <ul>
+    <li>Windows Smart App Control blocks new apps that aren't signed yet, and PanelOS isn't signed yet. That doesn't mean it's malware.</li>
+    <li>Fix: open <strong>Windows Security → App &amp; browser control → Smart App Control</strong>, set it to <strong>Off</strong>, then run the installer again. After installing, you can turn it back on there.</li>
+    <li>If the file was removed, go to <strong>Windows Security → Protection history</strong>, choose <strong>Restore</strong>, then download it again. Still stuck? <a href="../#contact">Contact us</a> for help or a refund.</li>
+  </ul>
   <p><a href="./">← Help hub</a></p>
 </main>
 <footer class="foot">
