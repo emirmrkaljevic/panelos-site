@@ -13,7 +13,7 @@ Landing page and help pages for **PanelOS**, Windows software for 3.5-inch USB P
 - Six themes: Classic, Signature, Nature Flow, Noir Editorial, Gallery, Chronograph
 - Landscape or portrait, custom accent color, starts with Windows from the tray
 
-**Lite** is free (Classic theme, all sensors). **Pro** is €14.99 one-time: all themes, Spotify, 2 PCs, all 1.x updates.
+**Lite** is free (Classic theme, all sensors). **Pro** is $15.99 one-time: all themes, Spotify, 2 PCs, all 1.x updates.
 
 ## Help
 [Setup](https://emirmrkaljevic.github.io/panelos-site/help/setup.html) ·

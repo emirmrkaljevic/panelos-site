@@ -2,8 +2,8 @@
 const SITE = {
   name: 'PanelOS',
   tagline: 'Software for 3.5-inch USB PC screens: temperatures, watts and what is playing on Spotify, in six themes.',
-  price: '€14.99',
-  buyUrl: '#',   // Lemon Squeezy checkout link (Pro)
+  price: '$15.99',
+  buyUrl: 'https://emirmk.gumroad.com/l/vmhopx',   // Gumroad checkout (Pro)
   liteUrl: '#',  // Lite download link
 
   // Contact form. Works with Web3Forms or Formspree style endpoints.
