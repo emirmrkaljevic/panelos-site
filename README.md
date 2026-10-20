@@ -5,6 +5,11 @@ Landing page and help pages for **PanelOS**, Windows software for 3.5-inch USB P
 
 **Live site:** https://emirmrkaljevic.github.io/panelos-site/
 
+**Download Lite (free):** [PanelOS-Setup.exe](https://github.com/emirmrkaljevic/panelos-site/releases/latest/download/PanelOS-Setup.exe) (Windows 10/11) ·
+**Get Pro ($15.99 one-time):** https://emirmk.gumroad.com/l/vmhopx
+
+![Signature theme on a 480×320 panel (real app capture)](assets/theme_signature_landscape_3x.png)
+
 [![PanelOS homepage](assets/readme_hero.jpg)](https://emirmrkaljevic.github.io/panelos-site/)
 
 ## What PanelOS shows
