@@ -14,11 +14,13 @@ Landing page and help pages for **PanelOS**, Windows software for 3.5-inch USB P
 
 ## What PanelOS shows
 - CPU and GPU temperature, load, watts, fans, RAM and VRAM
-- Spotify now-playing with album cover (Pro)
+- Local clock, and weather for a city you set (Open-Meteo, refreshed every 15 minutes)
+- Now playing from Windows media controls, with Spotify as a fallback (Pro)
 - Six themes: Classic, Signature, Nature Flow, Noir Editorial, Gallery, Chronograph
 - Landscape or portrait, custom accent color, starts with Windows from the tray
+- Pro can use an animated weather background, a forecast, and a temperature alert
 
-**Lite** is free (Classic theme, all sensors). **Pro** is $6.99 one-time: all themes, Spotify, 2 PCs, all 1.x updates.
+**Lite** is free (Classic theme, all sensors). **Pro** is $6.99 one-time: all themes, now playing, animated weather, 2 PCs, all 1.x updates.
 
 ## Help
 [Setup](https://emirmrkaljevic.github.io/panelos-site/help/setup.html) ·

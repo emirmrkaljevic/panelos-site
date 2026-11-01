@@ -1,7 +1,7 @@
 /* Everything you might want to change lives here. */
 const SITE = {
   name: 'PanelOS',
-  tagline: 'Software for 3.5-inch USB PC screens: temperatures, watts and what is playing on Spotify, in six themes.',
+  tagline: 'Software for 3.5-inch USB PC screens: temperatures, watts, a local clock, weather for a city you set, and now playing from Windows, in six themes.',
   price: '$6.99',
   buyUrl: 'https://emirmk.gumroad.com/l/vmhopx',   // Gumroad checkout (Pro)
   liteUrl: 'https://github.com/emirmrkaljevic/panelos-site/releases/latest/download/PanelOS-Setup.exe',  // Lite download (public release, same Setup for Lite and Pro)
