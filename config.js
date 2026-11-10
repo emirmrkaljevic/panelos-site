@@ -1,7 +1,8 @@
 /* Everything you might want to change lives here. */
 const SITE = {
   name: 'PanelOS',
-  tagline: 'Software for 3.5-inch USB PC screens: temperatures, watts, a local clock, weather for a city you set, and now playing from Windows, in six themes.',
+  title: 'PanelOS: Windows hardware monitor for Turing Smart Screen and 3.5 inch USB PC screens',
+  tagline: 'Windows hardware monitor for Turing Smart Screen and other 3.5 inch USB PC screens. Live temps, load, watts and fans, plus Spotify now playing, in six themes.',
   price: '$6.99',
   buyUrl: 'https://emirmk.gumroad.com/l/vmhopx',   // Gumroad checkout (Pro)
   liteUrl: 'https://github.com/emirmrkaljevic/panelos-site/releases/latest/download/PanelOS-Setup.exe',  // Lite download (public release, same Setup for Lite and Pro)

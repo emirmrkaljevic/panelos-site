@@ -6,10 +6,13 @@
   each('[data-site="price"]', function (el) { el.textContent = SITE.price; });
   each('a[data-site="buyUrl"]', function (el) { el.href = SITE.buyUrl; });
   each('a[data-site="liteUrl"]', function (el) { el.href = SITE.liteUrl; });
-  document.title = SITE.name + ': a better face for that little USB screen';
+  var pageTitle = SITE.title || (SITE.name + ': a better face for that little USB screen');
+  document.title = pageTitle;
   var m = document.querySelector('meta[name="description"]'); if (m) m.content = SITE.tagline;
-  var og = document.querySelector('meta[property="og:title"]'); if (og) og.content = SITE.name;
+  var og = document.querySelector('meta[property="og:title"]'); if (og) og.content = pageTitle;
   var ogd = document.querySelector('meta[property="og:description"]'); if (ogd) ogd.content = SITE.tagline;
+  var tw = document.querySelector('meta[name="twitter:title"]'); if (tw) tw.content = pageTitle;
+  var twd = document.querySelector('meta[name="twitter:description"]'); if (twd) twd.content = SITE.tagline;
 })();
 
 /* Theme tiles swap the hero panel */

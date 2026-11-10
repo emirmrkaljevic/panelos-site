@@ -3,8 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Windows blocked PanelOS | PanelOS Help</title>
-  <meta name="description" content="What to do if Windows SmartScreen warns about the PanelOS installer." />
+  <title>Why does Windows SmartScreen warn when I install PanelOS? | PanelOS Help</title>
+  <meta name="description" content="Why Windows SmartScreen may warn when you install PanelOS, how to continue with More info then Run anyway, and how to verify the installer SHA-256." />
+  <link rel="canonical" href="https://emirmrkaljevic.github.io/panelos-site/help/smartscreen.html" />
+  <meta name="theme-color" content="#0b0b0a" />
   <link rel="stylesheet" href="help.css?v=20261016" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
@@ -20,8 +22,9 @@
 </header>
 <main class="help article">
   <p class="crumb"><a href="../">PanelOS</a> · <a href="./">Help</a></p>
-  <h1>Windows blocked PanelOS / SmartScreen</h1>
-  <p>PanelOS is not code-signed yet, so Windows may show a SmartScreen warning the first time you run the installer. That is expected for a new independent app.</p>
+  <h1>Why does Windows SmartScreen warn when I install PanelOS?</h1>
+  <p>The installer is not code-signed yet. Signing certificates are expensive for a solo developer, so Windows may show a SmartScreen warning the first time you run the installer. That is expected for a new independent app.</p>
+  <p>Each new release is submitted to Microsoft for review. The SHA-256 of every installer is published in the <a href="https://github.com/emirmrkaljevic/panelos-site/releases">release notes</a>, so you can verify that the file you downloaded matches the published hash.</p>
   <h2>What to do</h2>
   <ol>
     <li>Download only from the official PanelOS site (or the link we send you).</li>
