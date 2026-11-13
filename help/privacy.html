@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy | PanelOS</title>
+  <meta name="description" content="What PanelOS keeps on your PC, which online services it talks to, and what the website loads." />
+  <meta name="theme-color" content="#0b0b0a" />
+  <link rel="stylesheet" href="help.css?v=20261016" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+<header class="top">
+  <a class="name" href="../">PanelOS</a>
+  <nav>
+    <a href="../#buy">Buy</a>
+    <a href="./">Help</a>
+    <a href="../#contact">Contact</a>
+  </nav>
+</header>
+<main>
+  <section class="article">
+    <p class="crumb"><a class="back" href="./">← Help</a></p>
+    <h1>Privacy</h1>
+    <p>Last updated: November 13, 2026.</p>
+    <p>PanelOS is a small Windows app I build and sell myself. It has no account, no analytics, no ads and no tracking. This page lists everything it keeps and every online service it talks to.</p>
+    <h2>What stays on your PC</h2>
+    <p>Sensor readings (temperatures, load, watts, RAM, VRAM, fans), the song that is playing, album covers, your settings, your licence file and the app logs all stay in your Windows user profile. Now playing is read from the Windows media session or the Spotify desktop app on the same PC. There is no Spotify login. The app also keeps a random install ID on disk to tell apart which PC a licence belongs to. It is never sent anywhere.</p>
+    <h2>When PanelOS goes online</h2>
+    <ul>
+      <li><strong>Album covers:</strong> the artist and song title are sent to the public iTunes Search and Deezer search APIs, and the cover image is downloaded from their image servers.</li>
+      <li><strong>Weather (Pro):</strong> the city you type is sent to the Open-Meteo geocoding API, and its coordinates to the Open-Meteo forecast API. Leave the city empty and no weather requests are made.</li>
+      <li><strong>Updates:</strong> the app asks GitHub Releases for the latest version number and, when you choose Update, downloads the installer from GitHub.</li>
+      <li><strong>Licence (Pro):</strong> your licence key and the product ID are checked with Gumroad. A Lemon Squeezy key, if you have one, is checked with Lemon Squeezy instead, and that activation also carries a short label made from your PC's Windows name.</li>
+    </ul>
+    <p>Each of these services gets your IP address like any web request and has its own privacy policy. PanelOS sends nothing else to them.</p>
+    <h2>The website</h2>
+    <p>This site is hosted on GitHub Pages and uses Google Fonts. The footer shows a badge image from LaunchIgniter. The site sets no cookies of its own and runs no analytics. The contact form sends only what you type (name, email, message) through Web3Forms so it reaches my inbox. Purchases happen on Gumroad, which handles payment and email under its own privacy policy. I never see your card details.</p>
+    <h2>Questions or deletion</h2>
+    <p>Write to me through the <a href="../#contact">contact form</a>. If you want me to delete our email conversation, say so and I will. To remove everything from your PC, uninstall PanelOS and delete its folder in your user profile.</p>
+  </section>
+</main>
+<footer class="foot">
+  <p class="legal">Not affiliated with any hardware manufacturer. Trademarks belong to their owners.</p>
+</footer>
+</body>
+</html>
