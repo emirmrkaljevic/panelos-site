@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Spotify / now playing | PanelOS Help</title>
-  <meta name="description" content="PanelOS reads the current song from Windows media controls. No Spotify login. Keep the desktop app open." />
+  <title>Now playing and album art | PanelOS Help</title>
+  <meta name="description" content="PanelOS can follow any player that appears in the Windows media controls, including YouTube Music, Apple Music, Tidal and the Spotify desktop app. Now playing and covers are Pro only." />
   <meta name="theme-color" content="#0b0b0a" />
   <link rel="stylesheet" href="help.css?v=20261016" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,14 +22,17 @@
 <main>
   <section class="article">
     <p class="crumb"><a class="back" href="./">← Help</a></p>
-    <h1>Spotify / now playing</h1>
-    <p>Pro only. There is no Spotify login inside PanelOS and Premium is not required. Settings can use Auto, the Windows media session, or Spotify only. Auto uses the Windows session, then Spotify.</p>
-    <ol>
-      <li>Keep the Spotify <em>desktop</em> app open on the same PC (browser-only often does not publish now-playing).</li>
-      <li>Start a track. Title, artist, progress and cover should appear on themes that show them.</li>
-      <li>Covers come from a public music search API, with a cleaned Windows thumbnail as fallback. The Spotify logo is never drawn.</li>
-    </ol>
-    <p>Nothing on the panel? Pause and play once, or switch theme and back. Other media apps that speak Windows media controls can show up too.</p>
+    <h1>Now playing and album art</h1>
+    <p>Now playing and album art are part of PanelOS Pro. Lite shows the stats only.</p>
+    <p>It is not only Spotify. PanelOS can follow any player that appears in the Windows media controls, including YouTube Music in Chrome or Edge, Apple Music, Tidal, and the Spotify desktop app. There is no Spotify login in PanelOS.</p>
+    <p>In Settings, under Now playing, pick the source:</p>
+    <ul>
+      <li><strong>Auto</strong> follows the current Windows media session, then a Spotify session, then any other session.</li>
+      <li><strong>SMTC</strong> stays on the Windows media session.</li>
+      <li><strong>Spotify</strong> only accepts a Spotify session. Keep the Spotify desktop app open on the same PC.</li>
+    </ul>
+    <p>The first-run setup wizard also has a Music step with the same three choices, from version 1.4.4.</p>
+    <p>Album art is looked up by song title and artist through the public iTunes and Deezer search APIs. While that search runs, and if no match is found, PanelOS uses a cleaned thumbnail from the player. A thumbnail that is mostly a logo or a flat color is dropped.</p>
   </section>
 </main>
 <footer class="foot">
