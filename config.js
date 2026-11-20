@@ -3,8 +3,8 @@ const SITE = {
   name: 'PanelOS',
   title: 'PanelOS: Windows hardware monitor for Turing Smart Screen and 3.5 inch USB PC screens',
   tagline: 'Windows hardware monitor for Turing Smart Screen and other 3.5 inch USB PC screens. Live temps, load, watts and fans, plus Spotify now playing, in six themes.',
-  price: '$6.99',
-  buyUrl: 'https://emirmk.gumroad.com/l/vmhopx',   // Gumroad checkout (Pro)
+  price: '',
+  buyUrl: 'https://emirmrkaljevic.github.io/panelos-site/get-pro.html',  // Skin to Scan packages (Pro is included)
   liteUrl: 'https://github.com/emirmrkaljevic/panelos-site/releases/latest/download/PanelOS-Setup.exe',  // Lite download (public release, same Setup for Lite and Pro)
 
   // Contact form. Works with Web3Forms or Formspree style endpoints.

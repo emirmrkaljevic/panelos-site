@@ -34,3 +34,10 @@ th{color:var(--ink);font-weight:500}
 .foot{position:relative;z-index:1;max-width:760px;width:100%;margin:0 auto;padding:26px 40px 40px;border-top:1px solid var(--line);color:var(--mute);font-size:12px}
 .foot p{color:var(--mute);margin:0}
 @media(max-width:900px){.top{padding:22px}.top nav{gap:20px}main{padding:60px 22px 40px}h1{font-size:34px}.foot{padding:22px}body::before{height:260px}}
+
+.packages{list-style:none;padding:0;margin:8px 0 22px}
+.packages li{border-top:1px solid var(--line);margin:0;padding:16px 0}
+.packages li:last-child{border-bottom:1px solid var(--line)}
+.packages a{display:inline-block;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink);font-weight:500}
+.packages a:hover{border-color:var(--ink)}
+.packages span{display:block;color:var(--mute);font-size:13px;margin-top:4px}
