@@ -7,7 +7,7 @@
   <meta name="description" content="PanelOS Pro comes with any Skin to Scan package. Read this before you pay, then choose Basic, Pro or Enterprise on skintoscan.com." />
   <link rel="canonical" href="https://emirmrkaljevic.github.io/panelos-site/get-pro.html" />
   <meta name="theme-color" content="#0b0b0a" />
-  <link rel="stylesheet" href="help/help.css?v=20261120" />
+  <link rel="stylesheet" href="help/help.css?v=20261128" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
 </head>
@@ -24,7 +24,8 @@
   <section class="article">
     <h1>Get PanelOS Pro</h1>
     <p>Please read this before you pay.</p>
-    <p>PanelOS Pro comes with any Skin to Scan package on skintoscan.com. You are paying for a Skin to Scan package, and PanelOS Pro is included. After you pay, create an account on skintoscan.com if you don't have one yet. I email your PanelOS Pro licence key and the download link within 24 hours.</p>
+    <p>PanelOS Pro comes with any Skin to Scan package on skintoscan.com. You are paying for a Skin to Scan package, and PanelOS Pro is included.</p>
+    <p>After paying, fill in the short form below with your Skin to Scan order number and your email. I check the order and then email your PanelOS Pro key and the download link, usually within 24 hours.</p>
     <p>Choose one of the three English packages below. Prices are in euro.</p>
     <ul class="packages">
       <li>
@@ -40,8 +41,25 @@
         <span>15 picture pack, plus PanelOS Pro.</span>
       </li>
     </ul>
+    <h2 id="order">Send your order number</h2>
+    <form id="pro-order" class="order-form" action="https://formsubmit.co/FORMSUBMIT_ALIAS" method="POST">
+      <input type="hidden" name="_subject" value="PanelOS Pro order" />
+      <input type="hidden" name="_template" value="table" />
+      <input type="hidden" name="_captcha" value="false" />
+      <div class="hp" aria-hidden="true">
+        <label>Leave this empty <input type="text" name="_honey" tabindex="-1" autocomplete="off" /></label>
+      </div>
+      <label>Skin to Scan order number <input type="text" name="order" required maxlength="40" autocomplete="off" /></label>
+      <label>Email for the key <input type="email" name="email" required maxlength="120" autocomplete="email" /></label>
+      <label>Note <span class="opt">(optional)</span> <textarea name="note" rows="3" maxlength="600"></textarea></label>
+      <p class="form-row">
+        <button type="submit">Send</button>
+        <span class="status" id="po-status" role="status" aria-live="polite"></span>
+      </p>
+    </form>
+    <p class="small">The form sends only what you type, so I can check the order and send your key.</p>
     <p>PanelOS Pro includes every theme, now playing, animated weather, two PCs, and all 1.x updates. Skin to Scan is a skin health screening tool. It is not a medical diagnosis.</p>
-    <p>You can install the <a href="https://github.com/emirmrkaljevic/panelos-site/releases/latest/download/PanelOS-Setup.exe">free Lite build</a> while you wait. It is the same Setup.exe. When the key arrives, paste it in Settings → License.</p>
+    <p>You can install the <a href="https://github.com/emirmrkaljevic/panelos-site/releases/latest/download/PanelOS-Setup.exe">free Lite build</a> while you wait. It is the same Setup.exe. When the key arrives, paste it in Settings, License.</p>
     <p>If you already bought PanelOS Pro on Gumroad, your key still works. Nothing changes for you.</p>
     <p>If PanelOS doesn't work with your panel and I can't fix it within 7 days, use the <a href="./#contact">contact form</a>.</p>
   </section>
@@ -49,5 +67,31 @@
 <footer class="foot">
   <p class="legal">Not affiliated with any hardware manufacturer. Trademarks belong to their owners.</p>
 </footer>
+<script>
+(function () {
+  var form = document.getElementById('pro-order');
+  if (!form) return;
+  var status = document.getElementById('po-status');
+  var button = form.querySelector('button[type="submit"]');
+  function say(msg, kind) { status.textContent = msg; status.className = 'status ' + (kind || ''); }
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    say('');
+    if (form.elements._honey.value) { form.reset(); say('Thanks, sent.', 'ok'); return; }
+    if (!form.checkValidity()) { say('Please add your order number and a valid email.', 'err'); return; }
+    var endpoint = form.getAttribute('action').replace('formsubmit.co/', 'formsubmit.co/ajax/');
+    if (/FORMSUBMIT_ALIAS/.test(endpoint)) { say("The form isn't connected yet. Please use the contact form.", 'err'); return; }
+    button.disabled = true; say('Sending...');
+    fetch(endpoint, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } })
+      .then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { return { ok: r.ok, j: j }; }); })
+      .then(function (res) {
+        if (res.ok && String(res.j.success) !== 'false') { form.reset(); say("Thanks, sent. I'll email your key after I check the order.", 'ok'); }
+        else { say('Not sent. Please try again or use the contact form.', 'err'); }
+      })
+      .catch(function () { say('Not sent. Check your connection and try again.', 'err'); })
+      .then(function () { button.disabled = false; });
+  });
+})();
+</script>
 </body>
 </html>
